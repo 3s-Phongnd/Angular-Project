@@ -7,7 +7,11 @@ import { ContactListComponent } from './container/contact-list/contact-list.comp
 import { ContactImageDetailComponent } from './contact-image-detail/contact-image-detail.component';
 
 @NgModule({
-  declarations: [AppComponent, ContactListComponent, ContactImageDetailComponent],
+  declarations: [
+    AppComponent,
+    ContactListComponent,
+    ContactImageDetailComponent,
+  ],
   imports: [BrowserModule, AppRoutingModule],
   providers: [],
   bootstrap: [AppComponent],

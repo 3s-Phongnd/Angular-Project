@@ -1,1 +1,40 @@
-<h2>{{ message }}</h2>
+<button (click)="printable = !printable">Toggle message</button>
+<h2 *ngIf="printable">{{ message }}</h2>
+<p>Contact list data</p>
+<div *ngIf="contacts">
+  <div *ngFor="let contact of contacts">
+    <h3>{{ contact.name }}</h3>
+    <div>
+      <img *ngIf="contact.avatar?.url" [src]="contact.avatar?.url" />
+    </div>
+  </div>
+</div>
+
+<div>
+  <button (click)="changeTab(1)">Tab 1</button>
+  <button (click)="changeTab(2)">Tab 2</button>
+  <button (click)="changeTab(3)">Tab 3</button>
+</div>
+
+<div [ngSwitch]="tabIndex">
+  <div *ngSwitchCase="1">
+    <div>
+      tab 1
+      <p>tab 1111111111111111111111111</p>
+    </div>
+  </div>
+
+  <div *ngSwitchCase="2">
+    <div>
+      tab 2
+      <p>tab 2222222222222222222222222</p>
+    </div>
+  </div>
+
+  <div>
+    <div *ngSwitchCase="3">
+      tab 3
+      <p>tab 33333333333333333</p>
+    </div>
+  </div>
+</div>
